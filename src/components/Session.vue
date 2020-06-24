@@ -47,6 +47,8 @@ export default {
     });
 
     this.session.on('streamCreated', event => {
+      console.log('event.stream.connection.data', event.stream.connection.data)
+      console.log('event.stream.connection', event.stream.connection)
       this.streams.push(event.stream);
     });
     this.session.on('streamDestroyed', event => {
